@@ -1,7 +1,5 @@
 import { Http, Response } from '@angular/http';
-import { API } from './../API.service';
 import { list } from './../../list';
-
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -12,30 +10,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent {
   //declare lists
-  lists : list[];
+  listsSearch : list[];
   onClick = false;
   urlAPI : string;
+  movieSearch: String;
 
   constructor(private http: Http) {
     // this.http.get()
     // .subscribe(listSearch => this.lists = listSearch);
   }
   
-  movieSearch: String;
+  
 
-  onSubmit(f){
-    console.log(f.value.movieSearch);
-    this.movieSearch = f.value.movieSearch;
-    this.urlAPI = 'http://www.omdbapi.com/?s=' + f.value.movieSearch + '&apikey=thewdb';
+  // onSubmit(f){
+  //   console.log(f.value.movieSearch);
+  //   this.movieSearch = f.value.movieSearch;
+  //   this.urlAPI = 'http://www.omdbapi.com/?s=' + f.value.movieSearch + '&apikey=thewdb';
 
-    this.http.get(this.urlAPI)
-      .subscribe((lists: Response) => {
-        this.lists = lists.json().Search;
-        console.log(this.lists);
-      });
+  //   this.http.get(this.urlAPI)
+  //     .subscribe((lists: Response) => {
+  //       this.listsSearch = lists.json().Search;
+  //       console.log(this.listsSearch);
+  //     });
+  //   this.onClick = true;
+  // }
 
-    f.value.movieSearch = '';
-    this.onClick = true;
+  onKeyPress($event){
+    
+      this.urlAPI = 'http://www.omdbapi.com/?s=' + this.movieSearch + '&apikey=thewdb';
+      
+      this.http.get(this.urlAPI)
+        .subscribe((lists: Response) => {
+          this.listsSearch = lists.json().Search;
+        });
+
+      this.onClick = true;
   }
 
 }
