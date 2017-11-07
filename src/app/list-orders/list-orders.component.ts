@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-orders.component.css']
 })
 export class ListOrdersComponent {
+  // listNumber = [1,2,3,4,5];
   lists: list[];
   
   constructor(private ListOrdersService: ListOrdersService) {
