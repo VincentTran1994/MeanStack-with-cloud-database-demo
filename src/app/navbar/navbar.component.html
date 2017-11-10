@@ -3,47 +3,45 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation" style="">
     <span class="navbar-toggler-icon"></span>
   </button>
-    <a class="navbar-brand"[routerLink]="['/homePage']" >Moive App</a>
+    <a class="navbar-brand" routerLink='/homePage' >Moive App</a>
   
     <div class="collapse navbar-collapse" id="navbarColor03">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item" routerLinkActive="active current">
-          <a class="nav-link" [routerLink]="['/homePage']">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" routerLink='/homePage'>Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item" routerLinkActive="active current">
-          <a class="nav-link" [routerLink]="['/list']" >List of Orders</a>
+          <a class="nav-link" routerLink='/list' >List of Orders</a>
         </li>
         <li class="nav-item" routerLinkActive="active current">
-          <a class="nav-link" [routerLink]="['#']" >Schedule</a>
+          <a class="nav-link" routerLink='/schedule' >Schedule</a>
         </li>
         <li class="nav-item" routerLinkActive="active current">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" routerLink='/about'>About</a>
         </li>
       </ul>
     
     <div class="pos-rel">
-      <form class="form-inline">
+      <form class="form-inline" (click) = "onfocus()" (blur) = "onblur()">
         <input [(ngModel)]="movieSearch" 
               name="movieSearch" 
               id="navSearch" 
               class="form-control mr-sm-2" 
               type="text" 
               placeholder="Search movie" 
-              (keyup) = "onKeyPress($event)" 
-              (click) = "onfocus()" 
-              (blur) = "onblur()">    
+              (keyup) = "onKeyPress($event)" >    
         <div *ngIf="dropDown" class="container dropdown-content" >
 
           <div class="listContents" *ngFor = 'let list of listsSearch'>
-              <div class="container" >
+              <a class="container" [routerLink]="['/detail',list.imdbID]">
                 <div>
                   <img class="img" src="{{list.Poster}}">
-                  <a [routerLink]="['/homePage']">{{list.Title}}</a>
+                  {{list.Title}}
                 </div>
                 <small>{{list.Year}}</small>
-              </div>
+              </a>
 
-            </div>
+          </div>
         </div>
       </form>
     </div>    

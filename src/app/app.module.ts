@@ -1,4 +1,4 @@
-
+import { ScheduleComponent } from './schedule/schedule.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule, Response } from '@angular/http';
@@ -8,13 +8,18 @@ import { FormsModule }   from '@angular/forms';
 import { RouterModule,Route } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { DetailMovieComponent } from './detail-movie/detail-movie.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListOrdersComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    ScheduleComponent,
+    AboutComponent,
+    DetailMovieComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +37,22 @@ import { HomeComponent } from './home/home.component';
       {
         path: 'list',
         component: ListOrdersComponent
+      },
+      {
+        path: 'schedule',
+        component: ScheduleComponent
+      },
+      {
+        path: 'about',
+        component: AboutComponent
+      },
+      {
+        path: 'detail/:id',
+        component: DetailMovieComponent
+      },
+      {
+        path: '**',
+        component: HomeComponent
       }
     ])   
   ],

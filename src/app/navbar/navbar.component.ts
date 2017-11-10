@@ -1,6 +1,6 @@
 import { Http, Response } from '@angular/http';
 import { list } from './../../list';
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'navbar',
@@ -49,6 +49,6 @@ export class NavbarComponent {
     this.dropDown = !this.dropDown;
   }
   onblur(){
-    this.dropDown = !this.dropDown;
+    // this.dropDown = !this.dropDown;
   }
 }
