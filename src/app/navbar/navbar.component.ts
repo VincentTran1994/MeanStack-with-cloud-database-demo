@@ -1,6 +1,6 @@
 import { Http, Response } from '@angular/http';
 import { list } from './../../list';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'navbar',
@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent {
   //declare lists
   listsSearch : list[];
-  onClick = false;
+  dropDown = false;
   urlAPI : string;
   movieSearch: String;
 
@@ -43,8 +43,12 @@ export class NavbarComponent {
         .subscribe((lists: Response) => {
           this.listsSearch = lists.json().Search;
         });
-
-      this.onClick = true;
   }
 
+  onfocus(){
+    this.dropDown = !this.dropDown;
+  }
+  onblur(){
+    this.dropDown = !this.dropDown;
+  }
 }

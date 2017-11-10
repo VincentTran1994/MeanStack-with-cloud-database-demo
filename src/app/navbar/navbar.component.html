@@ -7,32 +7,47 @@
   
     <div class="collapse navbar-collapse" id="navbarColor03">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <li class="nav-item" routerLinkActive="active current">
           <a class="nav-link" [routerLink]="['/homePage']">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" routerLinkActive="active current">
           <a class="nav-link" [routerLink]="['/list']" >List of Orders</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" routerLinkActive="active current">
           <a class="nav-link" [routerLink]="['#']" >Schedule</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" routerLinkActive="active current">
           <a class="nav-link" href="#">About</a>
         </li>
       </ul>
-      <!-- <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="form-inline">
-        <input ngModel name="movieSearch" #movieSearch="ngModel" class="form-control mr-sm-2" type="text" placeholder="Search" (onkeypress) = "onKeyPress($event)">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form> -->
+    
+    <div class="pos-rel">
       <form class="form-inline">
-        <input [(ngModel)]="movieSearch" name="movieSearch"  class="form-control mr-sm-2" type="text" placeholder="Search" (keyup) = "onKeyPress($event)">
+        <input [(ngModel)]="movieSearch" 
+              name="movieSearch" 
+              id="navSearch" 
+              class="form-control mr-sm-2" 
+              type="text" 
+              placeholder="Search movie" 
+              (keyup) = "onKeyPress($event)" 
+              (click) = "onfocus()" 
+              (blur) = "onblur()">    
+        <div *ngIf="dropDown" class="container dropdown-content" >
+
+          <div class="listContents" *ngFor = 'let list of listsSearch'>
+              <div class="container" >
+                <div>
+                  <img class="img" src="{{list.Poster}}">
+                  <a [routerLink]="['/homePage']">{{list.Title}}</a>
+                </div>
+                <small>{{list.Year}}</small>
+              </div>
+
+            </div>
+        </div>
       </form>
+    </div>    
+    
     </div>
   </nav>
-
- 
-<div class="container" *ngIf="onClick == true">
-  <ul *ngFor = 'let list of listsSearch'>
-    <li>{{list.Title}}</li>
-  </ul>
-</div>
+  

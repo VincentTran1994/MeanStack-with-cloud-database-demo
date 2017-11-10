@@ -22,7 +22,7 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     RouterModule.forRoot([
       {
-        path:'',
+        path:'*',
         component: HomeComponent
       },
       {
