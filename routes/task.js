@@ -4,7 +4,7 @@ var mongojs = require("mongojs");
 var db = mongojs('mongodb://trancongvuit:Trancongvuit123@ds147377.mlab.com:47377/demo_1_database', ['demo_1']);
 
 router.get('/tasks', (req, res) => {
-    db.demo_1.find(function(err, tasks){
+    db.demo_1.find((err, tasks) => {
         if(err){
             res.send(err);
         }
@@ -16,7 +16,7 @@ router.get('/tasks', (req, res) => {
 
 //get single task
 router.get('/task/:id', (req, res) => {
-    db.demo_1.findOne({_id: mongojs.ObjectId(req.params.id)}, (err, task) =>{
+    db.demo_1.findOne({_id: mongojs.ObjectId(req.params.id)}, (err, task) => {
         if(err){
             res.send(err);
         }
@@ -27,16 +27,27 @@ router.get('/task/:id', (req, res) => {
 } );
 
 //create a task
-router.post('/tasks', (req, res, next) => {
+router.post('/task', (req, res, next) => {
     var task = req.body;
-    db.demo_1.add(task, function(err, task){
-        if(err){
-            res.send(err);
-        }
-        else{
-            res.json(task);
-        }
-    });
+    console.log("From task.js");
+    console.log(task);
+    if(!task.Title)
+    {
+        res.status(400);
+        re.json({
+            "error": "Bad Data"
+        });
+    }
+
+    else
+    {
+       db.demo_1.save(task, function(err,task){
+           if(err){
+               res.send(err);
+           }
+           res.json(task);
+       })
+    }  
 });
 
 //delete a task

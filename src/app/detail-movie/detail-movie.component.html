@@ -14,8 +14,11 @@
   <li>{{list?.Country}}</li>
   <li>{{list?.Awards}}</li>
 </ul>
+<button (click) ="addList()">Add List</button>
+<a *ngIf="list" class="btn btn-primay" [routerLink]="['/list',list?.imdbID]">Add Favorite with id {{list?.imdbID}}</a>
+<a *ngIf="!list">Add Favorite with id {{list?.imdbID}} aaaaa</a>
 
-Title: String;
+<!-- Title: String;
 Year: String;
 imdbID: String;
 Type: String;
@@ -28,4 +31,4 @@ Actors: String;
 Plot: String;
 imdbRating: String;
 DVD: String;
-Production: String;
+Production: String; -->

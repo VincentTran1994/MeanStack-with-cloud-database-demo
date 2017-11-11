@@ -35,6 +35,10 @@ import { DetailMovieComponent } from './detail-movie/detail-movie.component';
         component: HomeComponent
       },
       {
+        path: 'list/:id',
+        component: ListOrdersComponent
+      },
+      {
         path: 'list',
         component: ListOrdersComponent
       },
