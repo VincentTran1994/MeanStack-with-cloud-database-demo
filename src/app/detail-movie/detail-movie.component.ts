@@ -36,12 +36,11 @@ export class DetailMovieComponent {
   }
 
   addList(){
-    console.log("Adding to the database");
+
     var newList = this.list;
     this.ListOrdersService.createList(newList)
       .subscribe(list => {
-        console.log("this list is being pushed from detail component ...");
-        console.log(list);
+        //do something here
       });
   } 
 
