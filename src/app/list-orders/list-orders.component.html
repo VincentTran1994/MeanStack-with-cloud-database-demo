@@ -6,9 +6,9 @@
 </div> -->
 
 
-
+<div class="container">
 <div class="container row" style="text-decoration: center;">
-  <div class="card col-3 col-md-4 col-sm-6" *ngFor = 'let list of lists'>
+  <div class="card col-4 col-md-4 col-sm-6" *ngFor = 'let list of lists'>
     <h3 class="card-header" style="text-decoration: center;">{{list.Title}}</h3>
     <div class="card-body">
       <h5 class="card-title">{{list.Actors}}</h5>
@@ -24,4 +24,5 @@
       <a class="card-link btn btn-danger" style="float: right;" (click)="onDelete(list._id)">Delete</a>
     </div>
   </div>
+</div>
 </div>
