@@ -1,8 +1,17 @@
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation" style="">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <button class="navbar-toggler" 
+      type="button" 
+      data-toggle="collapse" 
+      data-target="#navbarColor03" 
+      aria-controls="navbarColor03" 
+      aria-expanded="false" 
+      aria-label="Toggle navigation" 
+      style="">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
     <a class="navbar-brand" routerLink='/homePage' >Moive App</a>
   
     <div class="collapse navbar-collapse" id="navbarColor03">
@@ -21,31 +30,33 @@
         </li>
       </ul>
     
-    <div class="pos-rel">
-      <form class="form-inline" (click) = "onfocus()" (blur) = "onblur()">
-        <input [(ngModel)]="movieSearch" 
-              name="movieSearch" 
-              id="navSearch" 
-              class="form-control mr-sm-2" 
-              type="text" 
-              placeholder="Search movie" 
-              (keyup) = "onKeyPress($event)" >    
-        <div *ngIf="dropDown" class="container dropdown-content" >
-
-          <div class="listContents" *ngFor = 'let list of listsSearch'>
-              <a class="container" [routerLink]="['/detail',list.imdbID]">
-                <div>
-                  <img class="img" src="{{list.Poster}}">
-                  {{list.Title}}
-                </div>
-                <small>{{list.Year}}</small>
-              </a>
-
+      <div class="pos-rel" >
+        <form class="form-inline"  >
+          <input [(ngModel)]="movieSearch" 
+                name="movieSearch" 
+                id="navSearch" 
+                class="form-control mr-sm-2" 
+                type="text" 
+                placeholder="Search movie" 
+                (keyup) = "onKeyPress($event)"
+                (click) = "onfocus()"
+                (blur) = "onblur()" >  
+          </form>
+          <div *ngIf="dropDown" class="container dropdown-content" >
+            <div class="listContents" *ngFor = 'let list of listsSearch'>
+                <a class="container" [routerLink]="['/detail',list.imdbID]" (click) = "onfocus()">
+                  <div>
+                    <img class="img" src="{{list.Poster}}">
+                    {{list.Title}}
+                  </div>
+                  <small>{{list.Year}}</small>
+                </a>
+            </div>
           </div>
-        </div>
-      </form>
-    </div>    
-    
+
+        
+      </div>    
     </div>
+
   </nav>
   

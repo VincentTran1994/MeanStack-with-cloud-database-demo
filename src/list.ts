@@ -1,5 +1,6 @@
 
 export class list{    
+        _id: any;
         Title: String;
         Year: String;
         imdbID: String;
@@ -14,5 +15,5 @@ export class list{
         imdbRating: String;
         DVD: String;
         Production: String;
-        
+        price: number;
 }

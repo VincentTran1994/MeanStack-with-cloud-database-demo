@@ -20,20 +20,6 @@ export class NavbarComponent {
     // .subscribe(listSearch => this.lists = listSearch);
   }
   
-  
-
-  // onSubmit(f){
-  //   console.log(f.value.movieSearch);
-  //   this.movieSearch = f.value.movieSearch;
-  //   this.urlAPI = 'http://www.omdbapi.com/?s=' + f.value.movieSearch + '&apikey=thewdb';
-
-  //   this.http.get(this.urlAPI)
-  //     .subscribe((lists: Response) => {
-  //       this.listsSearch = lists.json().Search;
-  //       console.log(this.listsSearch);
-  //     });
-  //   this.onClick = true;
-  // }
 
   onKeyPress($event){
     
@@ -48,7 +34,9 @@ export class NavbarComponent {
   onfocus(){
     this.dropDown = !this.dropDown;
   }
+
   onblur(){
+    // console.log("blur");
     // this.dropDown = !this.dropDown;
   }
 }

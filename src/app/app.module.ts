@@ -1,3 +1,4 @@
+// import { swal } from 'sweetalert';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -10,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { DetailMovieComponent } from './detail-movie/detail-movie.component';
+
 
 @NgModule({
   declarations: [
@@ -33,6 +35,10 @@ import { DetailMovieComponent } from './detail-movie/detail-movie.component';
       {
         path:'homePage',
         component: HomeComponent
+      },
+      {
+        path: 'list/:id',
+        component: ListOrdersComponent
       },
       {
         path: 'list',
