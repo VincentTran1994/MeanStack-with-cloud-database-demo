@@ -36,7 +36,6 @@ export class DetailMovieComponent {
   }
 
   addList(){
-
     var newList = this.list;
     this.ListOrdersService.createList(newList)
       .subscribe(list => {

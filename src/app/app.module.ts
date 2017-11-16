@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { DetailMovieComponent } from './detail-movie/detail-movie.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { DetailMovieComponent } from './detail-movie/detail-movie.component';
     HomeComponent,
     ScheduleComponent,
     AboutComponent,
-    DetailMovieComponent
+    DetailMovieComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +53,10 @@ import { DetailMovieComponent } from './detail-movie/detail-movie.component';
       {
         path: 'about',
         component: AboutComponent
+      },
+      {
+        path: 'contact',
+        component: ContactComponent
       },
       {
         path: 'detail/:id',

@@ -1,0 +1,63 @@
+<div class="container">
+  <form #f="ngForm" (ngSubmit) = "onSubmit(f)">
+    <fieldset>
+      <legend><h1>Contact</h1></legend>
+      <!-- Name -->
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input 
+          type="email" 
+          class="form-control" 
+          id="name" 
+          [value]="f.value.name"
+          ngModel
+          name="name"
+          #name="ngModel"
+          placeholder="First and Last name">
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="email"
+          [value]="f.value.email"
+          ngModel 
+          name="email"
+          placeholder="Email">
+      </div>
+
+      <!-- Phone -->
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="phone" 
+          [value]="f.value.phone"
+          ngModel 
+          name="phone"
+          placeholder="Phone Number">
+      </div>
+
+      <!-- Request -->
+      <div class="form-group">
+        <label for="request">Request</label>
+        <textarea 
+          class="form-control" 
+          id="request" 
+          [value]="f.value.request"
+          rows="5"
+          ngModel 
+          name="request"
+          placeholder="Please enter your request here ..."></textarea>
+      </div>
+
+      <br>
+      <button type="submit" class="btn btn-success" style="float: right; font-size: 35px; cursor: pointer;">Submit</button>
+    </fieldset>
+    {{f.value|json}}
+  </form>
+</div>
