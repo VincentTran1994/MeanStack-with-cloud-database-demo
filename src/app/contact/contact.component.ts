@@ -17,6 +17,9 @@ export class ContactComponent {
     this.contactService.addContact(this.contact)
       .subscribe(contact => {
         f.value.name = "";
+        f.value.email = "";
+        f.value.phone = "";
+        f.value.request = "";
         }
       );
   }
