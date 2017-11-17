@@ -39,6 +39,7 @@ button {
     box-shadow: 3px 3px 2px grey;
 }
 button:hover {
+    cursor: pointer;
     background: rgba(0, 0, 0, 0.7);
     color: red;
     box-shadow: 0 0 0 2px red;

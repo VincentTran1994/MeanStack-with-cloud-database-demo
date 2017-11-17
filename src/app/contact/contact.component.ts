@@ -9,12 +9,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
-  contact : contact;
-  constructor(private contactService: ContactService) { }
+  contacts : contact[];
+  constructor(private contactService: ContactService) { 
+    this.contactService.getContacts()
+      .subscribe(contacts =>{
+        this.contacts = contacts;
+      });
+      console.log(this.contacts);
+  }
 
   onSubmit(f){
-    this.contact = f.value;
-    this.contactService.addContact(this.contact)
+    this.contacts.push(f.value);
+    this.contactService.addContact(f.value)
       .subscribe(contact => {
         f.value.name = "";
         f.value.email = "";

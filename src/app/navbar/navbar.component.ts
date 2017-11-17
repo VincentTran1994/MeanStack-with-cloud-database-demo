@@ -41,7 +41,8 @@ export class NavbarComponent {
   }
 
   onblur(){
-    // console.log("blur");
+    console.log("blur");
+    this.searchWidth = true;
     // this.dropDown = !this.dropDown;
   }
 }
