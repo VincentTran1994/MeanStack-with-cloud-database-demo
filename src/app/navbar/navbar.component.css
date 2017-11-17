@@ -21,6 +21,7 @@
 }
 a{
     font-style: none;
+    font-size: 80%;
 }
 
 .img{
@@ -33,5 +34,31 @@ h4{
 }
 
 #navSearch{
-    width: 600px;
+    width: 50px;
+    border-radius: 10px;
+    padding-left: 50px;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+}
+#navSearch:focus {
+    width: 500px;
+}
+
+.wrapper {
+    position: relative;
+}
+i.fa-search {
+    position: absolute;
+    left: 5px;
+    font-size: 60%;
+    top: 8px;
+    left: 10px;
+    color: DimGray;
+}
+
+::-webkit-input-placeholder { /* Chrome */
+  color: grey;
 }
