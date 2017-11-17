@@ -41,6 +41,7 @@
       </ul>
 
       <div class="pos-rel" >
+<<<<<<< HEAD
         <form class="form-inline" class="entypo-search" action="#">
             <fieldset>
                 <div class="wrapper">
@@ -56,6 +57,19 @@
                     (blur) = "onblur()" >
                 </div>
             </fieldset>
+=======
+        <form class="form-inline"  >
+          <input [(ngModel)]="movieSearch" 
+                name="movieSearch" 
+                id="navSearch" 
+                class="form-control mr-sm-2" 
+                type="text" 
+                placeholder="Search movie" 
+                (keyup) = "onKeyPress($event)"
+                [style.width] = "searchWidth? '300px' : '600px'" 
+                (click) = "onfocus()"
+                (blur) = "onblu()" >  
+>>>>>>> a45e168a99b38177011682d0fe65a6be928c5ad0
           </form>
           <div *ngIf="dropDown" class="container dropdown-content" >
             <div class="listContents" *ngFor = 'let list of listsSearch'>

@@ -14,6 +14,7 @@ export class NavbarComponent {
   dropDown = false;
   urlAPI : string;
   movieSearch: String;
+  searchWidth = true;
 
   constructor(private http: Http) {
     // this.http.get()
@@ -33,6 +34,10 @@ export class NavbarComponent {
 
   onfocus(){
     this.dropDown = !this.dropDown;
+    if(this.dropDown)
+      this.searchWidth = false;
+    else 
+      this.searchWidth = true;
   }
 
   onblur(){
