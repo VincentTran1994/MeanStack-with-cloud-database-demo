@@ -1,25 +1,26 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark"
     style="
     border-bottom-width: 0px;
     border-right-width: 0px;
     border-left-width: 0px;">
 
-    <button class="navbar-toggler" 
-      type="button" 
-      data-toggle="collapse" 
-      data-target="#navbarColor03" 
-      aria-controls="navbarColor03" 
-      aria-expanded="false" 
-      aria-label="Toggle navigation" 
+    <button class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarColor03"
+      aria-controls="navbarColor03"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
       style="">
       <span class="navbar-toggler-icon"></span>
     </button>
-    
-    <a class="navbar-brand" routerLink='/homePage' > 
+
+    <a class="navbar-brand" routerLink='/homePage' >
       Movie App
     </a>
-  
+
     <div class="collapse navbar-collapse" id="navbarColor03">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item" routerLinkActive="active current">
@@ -38,8 +39,25 @@
           <a class="nav-link" routerLink='/contact'>Contact</a>
         </li>
       </ul>
-    
+
       <div class="pos-rel" >
+<<<<<<< HEAD
+        <form class="form-inline" class="entypo-search" action="#">
+            <fieldset>
+                <div class="wrapper">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <input [(ngModel)]="movieSearch"
+                    name="movieSearch"
+                    id="navSearch"
+                    class="form-control mr-sm-2"
+                    type="text"
+                    placeholder="Search movie..."
+                    (keyup) = "onKeyPress($event)"
+                    (click) = "onfocus()"
+                    (blur) = "onblur()" >
+                </div>
+            </fieldset>
+=======
         <form class="form-inline"  >
           <input [(ngModel)]="movieSearch" 
                 name="movieSearch" 
@@ -51,6 +69,7 @@
                 
                 (click) = "onfocus()"
                 (blur) = "onblu()" >  
+>>>>>>> a45e168a99b38177011682d0fe65a6be928c5ad0
           </form>
           <div *ngIf="dropDown" class="container dropdown-content" >
             <div class="listContents" *ngFor = 'let list of listsSearch'>
@@ -64,10 +83,13 @@
             </div>
           </div>
 
-        
-      </div>    
+
+      </div>
     </div>
 
   </nav>
+<<<<<<< HEAD
   
   <!-- [style.width] = "searchWidth? '300px' : '600px'" -->
+=======
+>>>>>>> 08d7e1a512a20dd513ab4b4c64a3726da6be7486
