@@ -33,9 +33,7 @@ h4{
     float:right;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 #navSearch{
     width: 50px;
     border-radius: 10px;
@@ -65,9 +63,3 @@ i.fa-search {
 ::-webkit-input-placeholder { /* Chrome */
   color: grey;
 }
-=======
-/* #navSearch{
-    width: 600px;
-} */
->>>>>>> a45e168a99b38177011682d0fe65a6be928c5ad0
->>>>>>> 08d7e1a512a20dd513ab4b4c64a3726da6be7486
