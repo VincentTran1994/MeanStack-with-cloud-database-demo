@@ -6,10 +6,10 @@ body {
     background-size: cover;
     margin: 0;
     padding: 0;
-    
+
 }
 .individual-bubble {
-    position: absolute;
+    position: fixed;
     border-radius: 100%;
     bottom: 10px;
     background-color: #fff;

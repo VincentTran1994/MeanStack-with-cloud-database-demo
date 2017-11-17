@@ -20,13 +20,11 @@ export class AppComponent {
   // homePage = false;
   // listOrder = false;
   // schedule = false;
-  
+
   //declare lists
   lists : list[];
 
-  constructor(){
-     
-  }
+  constructor(private ListOrdersService: ListOrdersService) {};
 
-   
+
 }
