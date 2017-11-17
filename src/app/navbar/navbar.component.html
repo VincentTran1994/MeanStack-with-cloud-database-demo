@@ -48,8 +48,9 @@
                 type="text" 
                 placeholder="Search movie" 
                 (keyup) = "onKeyPress($event)"
+                [style.width] = "searchWidth? '300px' : '600px'" 
                 (click) = "onfocus()"
-                (blur) = "onblur()" >  
+                (blur) = "onblu()" >  
           </form>
           <div *ngIf="dropDown" class="container dropdown-content" >
             <div class="listContents" *ngFor = 'let list of listsSearch'>
