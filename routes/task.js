@@ -47,7 +47,7 @@ router.post('/task', (req, res, next) => {
            }
            res.json(task);
        });
-    }  
+    }
 });
 
 //delete a list
@@ -75,7 +75,7 @@ router.put('task/:id', (req, res, next) => {
     if(task.title){
         upTask.title = task.title;
     }
-    
+
     if(!upTask){
         res.status(400);
         res.json({
@@ -94,7 +94,7 @@ router.put('task/:id', (req, res, next) => {
         });
     }
 
-   
+
 });
 
 
@@ -165,7 +165,7 @@ router.put("/contact/:id", (req, res) =>{
         res.json({
             "error" : "Bad data!"
         });
-    } 
+    }
 });
 
 //deleting a contact

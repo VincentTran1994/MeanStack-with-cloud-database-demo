@@ -8,6 +8,7 @@ import { ListOrdersComponent } from './list-orders/list-orders.component';
 import { FormsModule }   from '@angular/forms';
 import { RouterModule,Route } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
+import { MovieComponent } from './movie-index/movie.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { DetailMovieComponent } from './detail-movie/detail-movie.component';
@@ -17,6 +18,7 @@ import { ContactComponent } from './contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
+    MovieComponent,
     ListOrdersComponent,
     NavbarComponent,
     HomeComponent,
@@ -30,9 +32,13 @@ import { ContactComponent } from './contact/contact.component';
     HttpModule,
     FormsModule,
     RouterModule.forRoot([
+      // {
+      //   path:'*',
+      //   component: MovieComponent
+      // },
       {
-        path:'*',
-        component: HomeComponent
+        path:'welcome',
+        component: MovieComponent
       },
       {
         path:'homePage',
@@ -64,9 +70,9 @@ import { ContactComponent } from './contact/contact.component';
       },
       {
         path: '**',
-        component: HomeComponent
+        component: MovieComponent
       }
-    ])   
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

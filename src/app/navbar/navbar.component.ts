@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
-  
+
 })
 export class NavbarComponent {
   //declare lists
@@ -20,12 +20,12 @@ export class NavbarComponent {
     // this.http.get()
     // .subscribe(listSearch => this.lists = listSearch);
   }
-  
+
 
   onKeyPress($event){
-    
+
       this.urlAPI = 'http://www.omdbapi.com/?s=' + this.movieSearch + '&apikey=thewdb';
-      
+
       this.http.get(this.urlAPI)
         .subscribe((lists: Response) => {
           this.listsSearch = lists.json().Search;
@@ -36,7 +36,7 @@ export class NavbarComponent {
     this.dropDown = !this.dropDown;
     if(this.dropDown)
       this.searchWidth = false;
-    else 
+    else
       this.searchWidth = true;
   }
 
