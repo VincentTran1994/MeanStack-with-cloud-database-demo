@@ -14,15 +14,15 @@ export class DetailMovieComponent {
   list : list[];
   urlAPI: string;
   title: string;
-  
-  constructor(private route: ActivatedRoute, 
-    private http: Http,
-    private ListOrdersService: ListOrdersService) {
-    
+
+  constructor(private route: ActivatedRoute,
+              private http: Http,
+              private ListOrdersService: ListOrdersService) {
+
     this.route.paramMap.
       subscribe(params => {
         let id = params.get('id');
-      
+
 
       //getting data from API
       this.urlAPI = 'http://www.omdbapi.com/?i=' + id + '&apikey=thewdb';
@@ -41,6 +41,6 @@ export class DetailMovieComponent {
       .subscribe(list => {
         //do something here
       });
-  } 
+  }
 
 }

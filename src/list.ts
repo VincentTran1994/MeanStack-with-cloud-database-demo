@@ -1,5 +1,4 @@
-
-export class list{    
+export class list {    
         _id: any;
         Title: String;
         Year: String;

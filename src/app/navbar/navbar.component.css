@@ -1,15 +1,15 @@
-
-
 .dropdown-content {
     position: absolute;
     /* chen */
     z-index: 1;
-    width: 600px;
+    width: auto;
     height: auto;
     /* top: 56px; */
     max-height: 300px;
     background: #f6f6f6;
     overflow: auto;
+    border-radius: 10px;
+    margin-top: 0px;
 }
 .listContents{
     cursor: pointer;
@@ -21,7 +21,7 @@
 }
 a{
     font-style: none;
-    font-size: 80%;
+    font-size: 140%;
 }
 
 .img{
@@ -33,10 +33,9 @@ h4{
     float:right;
 }
 
-
 #navSearch{
     width: 50px;
-    border-radius: 10px;
+    border-radius: 20px;
     padding-left: 50px;
     -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
@@ -55,7 +54,7 @@ i.fa-search {
     position: absolute;
     left: 5px;
     font-size: 130%;
-    top: 8px;
+    top: 25%;
     left: 10px;
     color: DimGray;
 }

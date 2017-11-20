@@ -17,7 +17,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <a class="navbar-brand" routerLink='/homePage' >
+    <a class="navbar-brand" routerLink='welcome' >
       Movie App
     </a>
 
@@ -25,9 +25,6 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item" routerLinkActive="active current">
           <a class="nav-link" routerLink='/homePage'>Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item" routerLinkActive="active current">
-          <a class="nav-link" routerLink='/list' >List of Orders</a>
         </li>
         <li class="nav-item" routerLinkActive="active current">
           <a class="nav-link" routerLink='/schedule' >Schedule</a>
@@ -40,24 +37,31 @@
         </li>
       </ul>
 
-      <div class="pos-rel" >
-        <form class="form-inline" class="entypo-search" action="#">
-            <fieldset>
-                <div class="wrapper">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                    <input [(ngModel)]="movieSearch"
-                    name="movieSearch"
-                    id="navSearch"
-                    class="form-control mr-sm-2"
-                    type="text"
-                    placeholder="Search movie..."
-                    (keyup) = "onKeyPress($event)"
-                    (click) = "onfocus()"
-                    (blur) = "onblur()" >
-                </div>
-            </fieldset>
+      <div class="pos-rel">
+          <ul class="nav navbar-nav navbar-right">
+              <form class="form-inline">
+                <fieldset>
+                    <div class="wrapper">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <input [(ngModel)]="movieSearch"
+                        name="movieSearch"
+                        id="navSearch"
+                        class="form-control mr-sm-2"
+                        type="text"
+                        placeholder="Search movie..."
+                        autocomplete="off"
+                        (keyup) = "onKeyPress($event)"
+                        (click) = "onfocus()"
+                        (blur) = "onblur()" >
+                    </div>
+                </fieldset>
+              </form>
 
-          </form>
+              <li class="nav-item" routerLinkActive="active current">
+                <a class="nav-link" routerLink='/list'><i class="fa fa-heart-o" aria-hidden="true"></i> My Favorite</a>
+              </li>
+          </ul>
+
           <div *ngIf="dropDown" class="container dropdown-content" >
             <div class="listContents" *ngFor = 'let list of listsSearch'>
                 <a class="container" [routerLink]="['/detail',list.imdbID]" (click) = "onfocus()">
@@ -70,10 +74,7 @@
             </div>
           </div>
 
-
       </div>
+
     </div>
-
-  </nav>
-  <!-- [style.width] = "searchWidth? '300px' : '600px'" -->
-
+</nav>
