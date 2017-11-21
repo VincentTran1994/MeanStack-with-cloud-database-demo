@@ -2,6 +2,7 @@ import { ListOrdersService } from './../list-orders.service';
 import { ContactService } from './../contact.service';
 import { contact } from './../../contact';
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -10,24 +11,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent {
   contacts : contact[];
-  constructor(private contactService: ContactService) { 
+  constructor(private contactService: ContactService) {
     this.contactService.getContacts()
       .subscribe(contacts =>{
         this.contacts = contacts;
       });
-      console.log(this.contacts);
   }
 
-  onSubmit(f){
+  onSubmit(f: NgForm) {
     this.contacts.push(f.value);
     this.contactService.addContact(f.value)
       .subscribe(contact => {
-        f.value.name = "";
-        f.value.email = "";
-        f.value.phone = "";
-        f.value.request = "";
+            // f.value.name = "";
+            // f.value.email = "";
+            // f.value.phone = "";
+            // f.value.request = "";
+            f.resetForm();
         }
       );
+  }
+
+  onDelete(id) {
+      var contacts = this.contacts;
+      this.contactService.deleteContact(id)
+        .subscribe(contact => {
+            for (var i = 0; i < contacts.length; i++) {
+                if (id == contacts[i]._id) {
+                    contacts.splice(i, 1);
+                }
+            }
+        });
   }
 
 }
