@@ -30,7 +30,7 @@ export class ContactComponent {
             f.resetForm();
         }
       );
-      this.contacts.push(f.value);
+      
   }
 
   onDelete(id) {
