@@ -19,7 +19,7 @@ export class ContactComponent {
   }
 
   onSubmit(f){
-    this.contacts.push(f.value);
+    
     this.contactService.addContact(f.value)
       .subscribe(contact => {
         f.value.name = "";
@@ -28,6 +28,8 @@ export class ContactComponent {
         f.value.request = "";
         }
       );
+
+      this.contacts.push(f.value);
   }
 
 }

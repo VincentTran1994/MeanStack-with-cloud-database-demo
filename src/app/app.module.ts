@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { DetailMovieComponent } from './detail-movie/detail-movie.component';
 import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ContactComponent } from './contact/contact.component';
     ScheduleComponent,
     AboutComponent,
     DetailMovieComponent,
-    ContactComponent
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
