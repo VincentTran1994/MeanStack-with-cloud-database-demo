@@ -5,10 +5,10 @@
       <!-- Name -->
       <div class="form-group">
         <label for="name">Full Name</label>
-        <input 
-          type="email" 
-          class="form-control" 
-          id="name" 
+        <input
+          type="email"
+          class="form-control"
+          id="name"
           [value]="f.value.name"
           ngModel
           name="name"
@@ -19,12 +19,12 @@
       <!-- Email -->
       <div class="form-group">
         <label for="email">Email</label>
-        <input 
-          type="text" 
-          class="form-control" 
+        <input
+          type="text"
+          class="form-control"
           id="email"
           [value]="f.value.email"
-          ngModel 
+          ngModel
           name="email"
           placeholder="Email">
       </div>
@@ -32,12 +32,12 @@
       <!-- Phone -->
       <div class="form-group">
         <label for="phone">Phone</label>
-        <input 
-          type="text" 
-          class="form-control" 
-          id="phone" 
+        <input
+          type="text"
+          class="form-control"
+          id="phone"
           [value]="f.value.phone"
-          ngModel 
+          ngModel
           name="phone"
           placeholder="Phone Number">
       </div>
@@ -45,12 +45,12 @@
       <!-- Request -->
       <div class="form-group">
         <label for="request">Request</label>
-        <textarea 
-          class="form-control" 
-          id="request" 
+        <textarea
+          class="form-control"
+          id="request"
           [value]="f.value.request"
           rows="5"
-          ngModel 
+          ngModel
           name="request"
           placeholder="Please enter your request here ..."></textarea>
       </div>
@@ -62,8 +62,8 @@
       </button>
     </fieldset>
   </form>
+  <br />
 
-  
     <div class="row" *ngFor="let contact of contacts">
 
       <div class="col-10">
@@ -71,13 +71,13 @@
       </div>
 
       <div class="col-2">
-        <button class="btn btn-danger" style="color:#fff;">Delete Request</button>
+        <button class="btn btn-danger" style="color:#fff;" (click)=onDelete(contact._id)>Delete Request</button>
       </div>
 
       <br><br>
 
     </div>
-  
-  
-  
+
+
+
 </div>

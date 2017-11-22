@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class ContactService {
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) {}
 
   //get list of contacts
   getContacts(){
@@ -15,17 +15,18 @@ export class ContactService {
   }
   //creating a new contact
   addContact(newContact){
+    console.log("adding");
     var headers = new Headers();
     headers.append('Content-Type','application/json');
 
-    return this.http.post("http://localhost:3000/api/contact", 
+    return this.http.post("http://localhost:3000/api/contact",
       JSON.stringify(newContact), {headers: headers})
-     .map(res => res.json());
+      .map(res => res.json());
   }
 
   //delete contact
   deleteContact(id){
-    this.http.delete("http://localhost:3000/api/contact" + id)
+    return this.http.delete("http://localhost:3000/api/contact/" + id)
       .map(res => res.json());
   }
 }
