@@ -1,0 +1,35 @@
+button{
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+div{
+    background: rgb(235, 232, 232);
+    height: 100%;
+    width: 100%;
+}
+h1{
+    padding-top: 2%;
+    color: black;
+}
+.jumbotron{
+    padding-top: .7em;
+    padding-bottom: .9em; 
+    margin: 0px;
+}
+.original-backgorund{
+    background: black;
+}
+/* img{
+    margin: 0 auto;
+    display: block;
+} */
+div.col-4{
+    text-align: center;
+}
+.bold{
+    font-size: 1.2rem;
+}
+
+div.container.jumbotron.col-4{
+    padding: 0px;
+}

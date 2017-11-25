@@ -62,3 +62,8 @@ i.fa-search {
 ::-webkit-input-placeholder { /* Chrome */
   color: grey;
 }
+
+.nav-item{
+    padding-left: 1.15em;
+    padding-right: 1.15em;
+}
