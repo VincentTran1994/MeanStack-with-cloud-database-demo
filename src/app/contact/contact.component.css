@@ -1,0 +1,27 @@
+.jumbotron{
+    background: black;
+}
+h1{
+    text-align: center;
+}
+.lead{
+    text-align: center;
+}
+.col-4{
+    margin-top: 4%;
+}
+hr{
+    border: .45px rgb(226, 222, 222) solid;
+    width: 80%;
+}
+.block{
+    display: block;
+}
+i{
+    text-align: center;
+    margin: 2%;
+}
+div.form{
+    width: 100%;
+}
+

@@ -23,14 +23,10 @@ export class ContactComponent {
     this.contacts.push(f.value);
     this.contactService.addContact(f.value)
       .subscribe(contact => {
-            // f.value.name = "";
-            // f.value.email = "";
-            // f.value.phone = "";
-            // f.value.request = "";
             f.resetForm();
         }
       );
-      
+    alert("Your request have been submit! Thank you!");
   }
 
   onDelete(id) {

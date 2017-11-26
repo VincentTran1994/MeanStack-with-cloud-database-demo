@@ -1,6 +1,7 @@
 import { Http, Response } from '@angular/http';
 import { list } from './../../list';
 import { Component, OnInit } from '@angular/core';
+import { componentFactoryName } from '@angular/compiler';
 
 @Component({
   selector: 'navbar',
@@ -33,7 +34,9 @@ export class NavbarComponent {
   }
 
   onfocus(){
+    
     this.dropDown = !this.dropDown;
+    console.log("drom onforcus: " + this.dropDown);
     if(this.dropDown)
       this.searchWidth = false;
     else
@@ -43,6 +46,11 @@ export class NavbarComponent {
   onblur(){
     console.log("blur");
     this.searchWidth = true;
-    // this.dropDown = !this.dropDown;
+    
+    console.log("from onblur: " + this.dropDown);
+    this.dropDown = !this.dropDown;
+    this.onfocus();
+    // this.movieSearch = "";
+    
   }
 }

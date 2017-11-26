@@ -1,16 +1,15 @@
 <!-- <div> -->
 <div class="container rounded">
-  <div class="jumbotron">
+  <div class="jumbotron" style="background-color: black;">
     
-      <h1 class="display-3" style="color: rgb(46, 42, 42);">{{list?.Title}}</h1>
+      <h1 class="display-3" style="color: rgb(238, 229, 229);">{{list?.Title}}</h1>
       <hr>
       <p class="lead"> {{list?.Genre}} - 
         <small>{{list?.Released}}</small>
         <br>
         <small>{{list?.Country}}</small>
       </p>
-      <button (click) ="addList()" routerLink='/list' class="btn btn-secondary float-right">
-        <i class="fa fa-heart" aria-hidden="true"></i> Add to my favorite</button>
+      
   </div>
   <!-- </div> -->
 <!-- </div> -->
@@ -24,7 +23,8 @@
           <br>
           <small>Language: {{list?.Language}}</small>
       </p>
-      
+      <button (click) ="addList()" routerLink='/list' class="btn btn-secondary">
+        <i class="fa fa-heart" aria-hidden="true"></i> Add to my favorite</button>
     </div>
 
     <div class="container jumbotron col-8">
@@ -43,7 +43,7 @@
               <br>
               <small>{{list?.Writer}}</small>
             </p>
-            <p class="lead font-weight-bold font-italic">Rated  <small>{{list?.Rated}}</small></p>
+            <p class="lead font-weight-bold font-italic">Rated \ <small>{{list?.Rated}}</small></p>
             <p class="lead font-weight-bold font-italic">Awards  <small>{{list?.Awards}}</small></p>
 
             
