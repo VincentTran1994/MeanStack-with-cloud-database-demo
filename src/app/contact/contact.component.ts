@@ -11,6 +11,8 @@ import { NgForm } from '@angular/forms';
 })
 export class ContactComponent {
   contacts : contact[];
+  mapDropDown = false;
+
   constructor(private contactService: ContactService) {
     this.contactService.getContacts()
       .subscribe(contacts =>{
@@ -41,4 +43,7 @@ export class ContactComponent {
         });
   }
 
+  faOnClick(){
+    this.mapDropDown = !this.mapDropDown;
+  }
 }
