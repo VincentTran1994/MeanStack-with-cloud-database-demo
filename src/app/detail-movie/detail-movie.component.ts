@@ -25,7 +25,7 @@ export class DetailMovieComponent {
 
 
       //getting data from API
-      this.urlAPI = 'http://www.omdbapi.com/?i=' + id + '&apikey=thewdb';
+      this.urlAPI = 'http://www.omdbapi.com/?i=' + id + '&plot=full&apikey=thewdb';
       this.http.get(this.urlAPI)
         .subscribe((lists: Response)=> {
           this.list = lists.json();
