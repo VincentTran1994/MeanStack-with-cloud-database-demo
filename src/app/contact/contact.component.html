@@ -78,11 +78,19 @@
 
       <div class="col-4">
         <div class="row">
-          <div class="col-2"></div>
+          <div class="col-4"></div>
 
-          <div class="col-6">
+          <div class="col-4">
             <div>
-              <i class="fa fa-map-marker fa-2x block" style="margin-bottom: 2%;"  aria-hidden="true"></i>
+              <i class="fa fa-map-marker fa-2x block" 
+                style="margin-bottom: 2%;"  
+                aria-hidden="true" 
+                (click)="faOnClick()">
+              </i>
+              <div *ngIf="mapDropDown" class="mapDropDown">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d106144.41962849755!2d-84.387628!3d33.760327!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9a7886c4cdd34842!2sGeorgia+State+University+Office+of+Undergraduate+Admissions!5e0!3m2!1svi!2sus!4v1511927492732" 
+                  width="300" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
               <br>
               <p class="lead" style="color: rgb(219, 211, 211); margin-bottom: 40px;">
                 Georgia State University
@@ -90,9 +98,14 @@
                 <small class="text-muted">Alanta, Georgia</small>
               </p>
             </div>
+
             <br>
             <div>
-              <i class="fa fa-phone fa-2x block" style="margin-bottom: 2%;" aria-hidden="true"></i>
+              <i class="fa fa-phone fa-2x block" 
+                style="margin-bottom: 2%;" 
+                aria-hidden="true"
+                (click)="faOnClick()"
+                ></i>
               <p class="lead" style="color: rgb(219, 211, 211); margin-bottom: 40px;">
                 (832) - 997 - 3345
                 <br>
@@ -101,7 +114,11 @@
             </div>
             <br>
             <div>
-              <i class="fa fa-envelope fa-2x block" style="margin-bottom: 2%;" aria-hidden="true"></i>
+              <i class="fa fa-envelope fa-2x block" 
+                style="margin-bottom: 2%;" 
+                aria-hidden="true"
+                (click)="faOnClick()"
+                ></i>
               <br>
               <p class="lead" style="color: rgb(219, 211, 211); margin-bottom: 20px;">
                 ilovemovie@gmail.com
@@ -143,4 +160,5 @@
       
   </div>
 </div>
+
 

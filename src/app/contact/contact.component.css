@@ -25,3 +25,12 @@ div.form{
     width: 100%;
 }
 
+.fa:hover{
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.mapDropDown{
+    position: absolute;
+    z-index: 1;
+    
+}
