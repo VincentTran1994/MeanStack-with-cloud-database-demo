@@ -48,6 +48,7 @@ export class ContactComponent {
   }
 
   faOnClick(){
+    console.log("clicked");
     this.mapDropDown = !this.mapDropDown;
   }
 }

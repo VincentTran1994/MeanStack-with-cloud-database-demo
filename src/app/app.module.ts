@@ -14,6 +14,7 @@ import { AboutComponent } from './about/about.component';
 import { DetailMovieComponent } from './detail-movie/detail-movie.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { PaymentComponent } from './payment/payment.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { FooterComponent } from './footer/footer.component';
     AboutComponent,
     DetailMovieComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
@@ -69,6 +71,10 @@ import { FooterComponent } from './footer/footer.component';
       {
         path: 'detail/:id',
         component: DetailMovieComponent
+      },
+      {
+        path: 'payment',
+        component: PaymentComponent
       },
       {
         path: '**',
