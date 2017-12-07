@@ -43,4 +43,7 @@ export class DetailMovieComponent {
       });
   }
 
+  goBack(){
+    window.history.back();
+  }
 }

@@ -23,8 +23,20 @@
           <br>
           <small>Language: {{list?.Language}}</small>
       </p>
-      <button (click) ="addList()" routerLink='/list' class="btn btn-secondary">
-        <i class="fa fa-heart" aria-hidden="true"></i> Add to my favorite</button>
+      <button 
+        (click) ="addList()" 
+        routerLink='/list' 
+        class="btn btn-secondary">
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i> 
+        Add to Cart
+      </button>
+      
+      <button 
+        class="btn btn-secondary" 
+        (click)="goBack()">
+        <i class="fa fa-undo" aria-hidden="true"></i>
+        Back
+      </button>
     </div>
 
     <div class="container jumbotron col-8">
