@@ -41,3 +41,10 @@ div.form{
     position: absolute;
     z-index: 1;
 }
+
+.view:hover{
+    background-color: rgb(64, 155, 207);
+}
+.delete:hover{
+    background-color: rgb(168, 15, 15);
+}
