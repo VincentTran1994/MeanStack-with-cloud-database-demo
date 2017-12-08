@@ -30,6 +30,7 @@ function rotate(e){
     "transform": "rotateY("+currdeg+"deg)"
   });
 }
+
   }
 
 }
