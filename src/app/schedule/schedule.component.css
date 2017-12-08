@@ -1,0 +1,59 @@
+.container {
+    margin: 20px auto;
+    position: static;
+    font-family: fantasy;
+    font-size: 17px;
+    background: rgba(128, 128, 128, 0.2);
+    height: stretch;
+}
+h2 {
+    padding-top: 4%;
+    margin-left: 5%;
+    /*background: -webkit-linear-gradient(#eee, #333);*/
+    background: -webkit-linear-gradient(#ed4264, #FFEDBC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+table {
+    border-spacing: 25px 0px;
+    border-collapse: separate;
+    border: none;
+    width: 80%;
+    height: 28vw;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 6%;
+    padding: 5px;
+    word-spacing: 3px;
+}
+td {
+    width: 20%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+th {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+tr.second {
+    height: 20vw;
+}
+th#first {
+    background: YellowGreen;
+}
+th#second {
+    background: DeepSkyBlue;
+}
+th#third {
+    background: rgb(255, 0, 120);
+}
+.detail {
+    background: bisque;
+    color: black;
+}
+div.location {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 55px;
+    word-spacing: normal;
+}
