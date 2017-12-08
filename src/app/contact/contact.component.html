@@ -1,8 +1,13 @@
 <div class="jumbotron">
-    <h1 class="display-2">Contact 247</h1>
+    <h1 class="display-2">Contact 24/7</h1>
     <hr>
-    <h1 class="display-4">We'd<i class="fa fa-heart-o" aria-hidden="true"></i>to help!</h1>
-    <p class="lead">We like to create things with fun, open-minded. Feel free to say hello</p>
+    <h1 class="display-4">
+      We'd
+      <i class="fa fa-heart-o" style="color:rgb(192, 21, 21);" aria-hidden="true"></i>
+      to help!</h1>
+    <p class="lead">
+      We like to create things with fun, open-minded. Feel free to say hello
+    </p>
 
     <div class="row">
       <div class="col-2"></div>
@@ -22,7 +27,9 @@
                       ngModel
                       name="name"
                       #name="ngModel"
-                      placeholder="First and Last name">
+                      placeholder="First and Last name"
+                      required
+                      >
                   </div>
             
                   <!-- Email -->
@@ -35,7 +42,9 @@
                       [value]="f.value.email"
                       ngModel
                       name="email"
-                      placeholder="Email">
+                      placeholder="Email"
+                      required
+                      >
                   </div>
             
                   <!-- Phone -->
@@ -48,7 +57,9 @@
                       [value]="f.value.phone"
                       ngModel
                       name="phone"
-                      placeholder="Phone Number">
+                      placeholder="Phone Number"
+                      required
+                      >
                   </div>
             
                   <!-- Request -->
