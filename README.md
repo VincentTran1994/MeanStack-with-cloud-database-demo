@@ -27,7 +27,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 # MeanStack-with-cloud-database-demo
 
-!!!IMPORTANT
+##IMPORTANT.......
+
 In order to run this project, should following those step here
 1. Need to install Node.js by following the instruction (https://nodejs.org/en/)
 2. Install Angular following instruction (https://cli.angular.io/)
