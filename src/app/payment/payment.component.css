@@ -1,0 +1,32 @@
+.matchColor{
+    color: rgb(218, 212, 212);
+}
+tr{
+    width: 100%;
+}
+td{
+    width: 100%;
+}
+.card .fa-credit-card{
+    position: absolute;
+    top:7px;
+    left: 10px;
+}
+.card .fa-id-card-o{
+    position: absolute;
+    top:7px;
+    left: 10px;
+}
+.card .fa-calendar{
+    position: absolute;
+    top:10px;
+    left: 10px;
+}
+.card .fa-shield{
+    position: absolute;
+    top:10px;
+    left: 10px;
+}
+.btn-outline-secondary{
+    border-radius: 50px;
+}

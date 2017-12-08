@@ -6,7 +6,22 @@ section{
 }
 
 
-.btn-danger{
-    color: white;
+.btn{
     cursor: pointer;
+}
+
+.detail:hover{
+    background-color: rgb(11, 124, 128);
+}
+
+.delete:hover{
+    background-color: rgb(196, 31, 31);
+}
+
+.checkout{
+    font-size: 1.5em;
+}
+
+.checkout:hover{
+    background-color: rgb(26, 74, 235);
 }

@@ -43,7 +43,12 @@ export class ContactComponent {
         });
   }
 
+  onDetail(id){
+    
+  }
+
   faOnClick(){
+    console.log("clicked");
     this.mapDropDown = !this.mapDropDown;
   }
 }
