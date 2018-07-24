@@ -11,11 +11,11 @@ import { componentFactoryName } from '@angular/compiler';
 })
 export class NavbarComponent {
   //declare lists
-  listsSearch : list[];
-  dropDown = false;
-  urlAPI : string;
-  movieSearch: String;
-  searchWidth = true;
+  public listsSearch : list[];
+  public dropDown = false;
+  public urlAPI : string;
+  public movieSearch: String;
+  public searchWidth = true;
 
   constructor(private http: Http) {
     // this.http.get()
@@ -34,7 +34,6 @@ export class NavbarComponent {
   }
 
   onfocus(){
-    
     this.dropDown = !this.dropDown;
     console.log("drom onforcus: " + this.dropDown);
     if(this.dropDown)

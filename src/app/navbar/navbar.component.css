@@ -1,7 +1,7 @@
 .dropdown-content {
     position: absolute;
     /* chen */
-    z-index: 1;
+    z-index: 99!important;
     width: auto;
     height: auto;
     /* top: 56px; */
@@ -53,6 +53,7 @@ h4{
 
 .wrapper {
     position: relative;
+    /* z-index: 99!important; */
 }
 i.fa-search {
     position: absolute;

@@ -11,9 +11,9 @@ import { ListOrdersService } from '../list-orders.service';
   styleUrls: ['./detail-movie.component.css']
 })
 export class DetailMovieComponent {
-  list : list[];
-  urlAPI: string;
-  title: string;
+  public list : any;
+  public urlAPI: string;
+  public title: string;
 
   constructor(private route: ActivatedRoute,
               private http: Http,
